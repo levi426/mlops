@@ -41,6 +41,9 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html", feature_meta=feature_meta)
+@app.route('/login')
+def login():
+    return "This is the login page"
 
 @app.route("/predict", methods=["POST"])
 def predict():
